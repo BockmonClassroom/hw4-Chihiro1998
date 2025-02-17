@@ -14,7 +14,6 @@ Either create a markdown readme file that has a copy of your ER diagram and expl
 Please also submit a link to your github submission to Canvas as well. This helps the TA grade faster. 
 
 ---
-```markdown
 # 🐾 Zoo ER Diagram
 
 ## 📖 Introduction
