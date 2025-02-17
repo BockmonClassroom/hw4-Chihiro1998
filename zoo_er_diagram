@@ -1,0 +1,53 @@
+digraph "Zoo ER Diagram" {
+	A [label="Animal
+--------------
+- Animal_ID (PK)
+- Species
+- Name
+- Age
+- Health_Status" color=lightblue shape=rectangle]
+	E [label="Exhibit
+--------------
+- Exhibit_ID (PK)
+- Name
+- Location
+- Capacity" color=lightgreen shape=rectangle]
+	K [label="Keeper
+--------------
+- Keeper_ID (PK)
+- Name
+- Hire_Date
+- Specialization" color=lightpink shape=rectangle]
+	"A_Animal_ID (PK)" [label="Animal_ID (PK)" shape=ellipse]
+	"A_Animal_ID (PK)" -> A
+	A_Species [label=Species shape=ellipse]
+	A_Species -> A
+	A_Name [label=Name shape=ellipse]
+	A_Name -> A
+	A_Age [label=Age shape=ellipse]
+	A_Age -> A
+	A_Health_Status [label=Health_Status shape=ellipse]
+	A_Health_Status -> A
+	"E_Exhibit_ID (PK)" [label="Exhibit_ID (PK)" shape=ellipse]
+	"E_Exhibit_ID (PK)" -> E
+	E_Name [label=Name shape=ellipse]
+	E_Name -> E
+	E_Location [label=Location shape=ellipse]
+	E_Location -> E
+	E_Capacity [label=Capacity shape=ellipse]
+	E_Capacity -> E
+	"K_Keeper_ID (PK)" [label="Keeper_ID (PK)" shape=ellipse]
+	"K_Keeper_ID (PK)" -> K
+	K_Name [label=Name shape=ellipse]
+	K_Name -> K
+	K_Hire_Date [label=Hire_Date shape=ellipse]
+	K_Hire_Date -> K
+	K_Specialization [label=Specialization shape=ellipse]
+	K_Specialization -> K
+	R1 [label="lives in" color=orange shape=diamond]
+	R2 [label="cares for" color=orange shape=diamond]
+	A -> R1 [label=N]
+	R1 -> E [label=1]
+	A -> R2 [label=M]
+	R2 -> K [label=N]
+}
